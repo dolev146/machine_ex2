@@ -10,6 +10,7 @@ def algorithm(data, labels, max_rounds=None):
 
     round_count = 1
     while max_rounds is None or round_count <= max_rounds:
+        print("Round", round_count, "of Perceptron" , "(max rounds:", max_rounds, ")" )
         mistake_found = False
 
         for i in range(n):
@@ -66,7 +67,7 @@ def read_data_from_file(file_path):
 
     return np.array(data), np.array(labels)
 
-# Example usage
+# running the code
 file_path = 'data.txt'
 data, labels = read_data_from_file(file_path)
 
